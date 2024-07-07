@@ -47,7 +47,7 @@ img.addEventListener("touchstart", (event) => {
   img.style.transformOrigin = "center center";
   img.style.transition = "transform 0.15s ease";
 
-  img.style.transform = "scale(0.90)";
+  img.style.transform = "scale(0.95)";
 });
 
 img.addEventListener("touchend", (event) => {
