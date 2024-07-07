@@ -1,0 +1,118 @@
+:root {
+  /* COLORS */
+  --color-bg-primary: #040617;
+
+  --color-stats-bg: #00270f;
+
+  --color-accent-1: #c70601;
+  --color-accent-2: #facd02;
+  --color-accent-3: #1d66ce;
+
+  --color-txt-primary: #fff;
+  --color-txt-secondary: #8a8a8a;
+
+  --color-blue-border: #575a00;
+  --color-shadow: #ffb101;
+
+  --color-progress-bar: #fbd000;
+  --color-skill-bar-bg: #00270f;
+
+  --color-grey-bar: red;
+  --color-active-link: red;
+  --color-active-slider: red;
+
+  --color-grey-dark: #404040;
+
+  --color-green-gradien-1: #296c2c;
+  --color-green-gradien-2: #43b047;
+
+  --color-blue-gradient-1: #0b2a55;
+  --color-blue-gradient-2: #1d66ce;
+
+  --color-mine-card-shadow: #43b047;
+
+  --color-rgb-blue-bg: 0, 55, 21;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blue-background {
+  background-color: var(--color-bg-secondary);
+  position: absolute;
+  top: 120px;
+  bottom: 0;
+  width: 100%;
+  border-radius: 50px 50px 0 0;
+  border-top: 1px solid var(--color-blue-border);
+}
+
+@media (max-height: 850px) {
+  .blue-background {
+    top: 70px;
+  }
+}
+
+@media (max-height: 720px) {
+  .blue-background {
+    top: 50px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: var(--color-txt-primary);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 200;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: center;
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+li {
+  list-style: none;
+}
