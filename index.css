@@ -286,7 +286,6 @@ body {
   top: 80%;
   left: 50%;
   transform: translate(-45%);
-  pointer-events: none;
 }
 
 .tap img {
