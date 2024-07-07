@@ -7,6 +7,7 @@ body {
   top: 11%;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
   z-index: -1;
 }
 
@@ -78,7 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 .stats {
