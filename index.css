@@ -1,5 +1,5 @@
 body {
-  padding: 10px 30px;
+  padding: 15px 25px;
 }
 
 .header {
@@ -64,4 +64,52 @@ body {
 .header-mariocoin-title {
   font-family: "Mont-heavy";
   font-size: 11px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 15px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 70px;
+  justify-content: center;
+  row-gap: 5px;
+  border: 1px solid var(--color-white);
+  border-radius: 15px;
+  padding: 15px 5px;
+  background: linear-gradient(to top, #ffe50066, rgba(255, 255, 255, 0.4));
+}
+
+.stat-card-title {
+  font-size: 11px;
+}
+
+.stat-card-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.stat-card-value img {
+  width: 15px;
+}
+
+.stat-card-value span {
+  font-family: "Mont-heavy";
+  text-transform: uppercase;
 }
