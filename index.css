@@ -32,6 +32,8 @@ body {
   border-radius: 50%;
   border: 1px solid var(--color-white);
   padding: 6px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -39,7 +41,15 @@ body {
   padding: 8px 12px;
   border: 1px solid var(--color-white);
   border-radius: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
   background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  background: -webkit-linear-gradient(
     to right,
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0)
@@ -74,17 +84,19 @@ body {
 .header-mariocoin-title {
   font-family: "Mont-heavy";
   font-size: 11px;
+  text-align: center;
 }
 
 .main {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   row-gap: 10px;
 }
 
 .stats {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   column-gap: 5px;
 }
@@ -129,4 +141,94 @@ body {
 .stat-card-value span {
   font-family: "Mont-heavy";
   text-transform: uppercase;
+}
+
+.total {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  border: 1px solid var(--color-white);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.total-coins {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.total-coins img {
+  width: 30px;
+}
+
+.total-coins span {
+  font-family: "Mont-heavy";
+  font-size: 30px;
+  text-align: center;
+}
+
+.total-lvl-progress img {
+  width: 100%;
+}
+
+.total-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 5px;
+  padding: 10px 0;
+}
+
+.total-profile-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  border: 1px solid var(--color-white);
+  border-radius: 30px;
+  padding: 1px 5px;
+}
+
+.total-profile img {
+  width: 20px;
+}
+
+.total-profile span {
+  font-size: 13px;
+}
+
+.total-profile-lvl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-accent-2);
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+
+.total-profile-lvl h5 span:nth-child(1) {
+  font-family: "Mont-heavy";
+  font-size: 18px;
+}
+
+.total-profile-lvl h5 span:nth-child(2) {
+  font-family: sans-serif;
+}
+
+.tap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
