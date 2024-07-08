@@ -283,6 +283,13 @@ body {
   );
 }
 
+@media (max-width: 370px) {
+  .total-lvl-bar {
+    height: 3%;
+    bottom: 13%;
+  }
+}
+
 .total-lvl-bar-flag {
   width: 30px;
   position: absolute;
@@ -290,8 +297,20 @@ body {
   right: -1px;
 }
 
+@media (max-width: 370px) {
+  .total-lvl-bar-flag {
+    width: 20px;
+  }
+}
+
 .total-lvl-bar-container {
   width: 320px;
+}
+
+@media (max-width: 370px) {
+  .total-lvl-bar-container {
+    width: 250px;
+  }
 }
 
 .total-profile {
