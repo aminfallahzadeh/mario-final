@@ -257,8 +257,41 @@ body {
   position: relative;
 }
 
-.total-lvl-progress img {
-  width: 100%;
+.total-lvl-bar {
+  position: absolute;
+  width: 98%;
+  height: 5%;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  background: -webkit-linear-gradient(
+    to right,
+    #e0902c 0%,
+    #edd823 25%,
+    #a0c025 50%,
+    #2bcb92 75%,
+    #00ffff 100%
+  );
+  background: linear-gradient(
+    to right,
+    #e0902c 0%,
+    #edd823 25%,
+    #a0c025 50%,
+    #2bcb92 75%,
+    #00ffff 100%
+  );
+}
+
+.total-lvl-bar-flag {
+  width: 30px;
+  position: absolute;
+  top: -2px;
+  right: -1px;
+}
+
+.total-lvl-bar-container {
+  width: 320px;
 }
 
 .total-profile {
@@ -416,7 +449,6 @@ footer {
 
 .menu {
   display: flex;
-  /* justify-content: center; */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.2);
