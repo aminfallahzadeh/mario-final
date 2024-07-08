@@ -3,7 +3,7 @@ let touchTimeout;
 
 img.addEventListener("touchstart", (event) => {
   event.preventDefault();
-  clearTimeout(touchTimeout);
+  // clearTimeout(touchTimeout);
   img.style.transform = "scale(0.95)";
 });
 
@@ -13,6 +13,8 @@ img.addEventListener("touchend", (event) => {
   Array.from(event.changedTouches).forEach((touch) => {
     const touchX = touch.clientX;
     const touchY = touch.clientY;
+
+    img.style.transform = "scale(1)";
 
     const plusOne = document.createElement("div");
     plusOne.className = "plus-one";
@@ -27,7 +29,7 @@ img.addEventListener("touchend", (event) => {
     }, 1000);
   });
 
-  touchTimeout = setTimeout(() => {
-    img.style.transform = "scale(1)";
-  }, 50);
+  // touchTimeout = setTimeout(() => {
+  //   img.style.transform = "scale(1)";
+  // }, 50);
 });
