@@ -346,6 +346,7 @@ footer {
 }
 
 .boost {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -356,6 +357,14 @@ footer {
   -webkit-backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.2);
   width: 100%;
+}
+
+.boost-mushroom {
+  position: absolute;
+  width: 40px;
+  left: 40px;
+  top: 0;
+  transform: translateY(-100%);
 }
 
 .boost-card {
@@ -389,4 +398,64 @@ footer {
 
 .boost-title {
   color: var(--color-white);
+}
+
+.menu {
+  display: flex;
+  /* justify-content: center; */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  border: 1px solid var(--color-white);
+  border-radius: 50px;
+  padding: 0 30px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-item-img {
+  width: 35px;
+}
+
+.menu-item-title {
+  color: var(--color-white);
+  font-size: 15px;
+}
+
+.active .menu-item-link .menu-item-img {
+  width: 50px;
+  transform: translateY(-10px);
+  filter: drop-shadow(0 0 22px var(--color-white));
+}
+
+.active .menu-item-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  border-radius: 50px;
 }
