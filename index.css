@@ -367,8 +367,8 @@ body {
 }
 
 #tap-effect {
-  transition: transform 0.3s ease;
-  perspective: 1000px;
+  transition: transform 0.1s ease;
+  /* perspective: 1000px; */
 }
 
 .plus-one {
