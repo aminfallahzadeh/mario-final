@@ -38,20 +38,53 @@
 //   });
 // });
 
+// const img = document.getElementById("tap-effect");
+
+// img.addEventListener("touchstart", (event) => {
+//   event.preventDefault();
+
+//   const rect = img.getBoundingClientRect();
+//   img.style.transformOrigin = "center center";
+//   img.style.transition = "transform 0.15s ease";
+
+//   img.style.transform = "scale(0.95)";
+// });
+
+// img.addEventListener("touchend", (event) => {
+//   const rect = img.getBoundingClientRect();
+
+//   Array.from(event.changedTouches).forEach((touch) => {
+//     const touchX = touch.clientX;
+//     const touchY = touch.clientY;
+
+//     const plusOne = document.createElement("div");
+//     plusOne.className = "plus-one";
+//     plusOne.innerText = "+1";
+//     document.body.appendChild(plusOne);
+
+//     plusOne.style.position = "absolute";
+//     plusOne.style.left = `${touchX}px`;
+//     plusOne.style.top = `${touchY}px`;
+
+//     img.style.transform = "scale(1)";
+
+//     setTimeout(() => {
+//       plusOne.remove();
+//     }, 1000);
+//   });
+// });
+
 const img = document.getElementById("tap-effect");
+let touchTimeout;
 
 img.addEventListener("touchstart", (event) => {
   event.preventDefault();
-
-  const rect = img.getBoundingClientRect();
-  img.style.transformOrigin = "center center";
-  img.style.transition = "transform 0.15s ease";
-
+  clearTimeout(touchTimeout);
   img.style.transform = "scale(0.95)";
 });
 
 img.addEventListener("touchend", (event) => {
-  const rect = img.getBoundingClientRect();
+  event.preventDefault();
 
   Array.from(event.changedTouches).forEach((touch) => {
     const touchX = touch.clientX;
@@ -62,14 +95,15 @@ img.addEventListener("touchend", (event) => {
     plusOne.innerText = "+1";
     document.body.appendChild(plusOne);
 
-    plusOne.style.position = "absolute";
     plusOne.style.left = `${touchX}px`;
     plusOne.style.top = `${touchY}px`;
-
-    img.style.transform = "scale(1)";
 
     setTimeout(() => {
       plusOne.remove();
     }, 1000);
   });
+
+  touchTimeout = setTimeout(() => {
+    img.style.transform = "scale(1)";
+  }, 50);
 });

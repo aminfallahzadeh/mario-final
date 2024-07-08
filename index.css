@@ -37,8 +37,43 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  height: 40vh;
   width: 100%;
   z-index: -1;
+}
+
+.ground-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.ground-mushroom {
+  width: 30px;
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  height: auto;
+}
+
+.ground-pipe-left {
+  z-index: -2;
+  position: absolute;
+  left: 2%;
+  top: 20%;
+}
+
+.ground-pipe-right {
+  z-index: -2;
+  position: absolute;
+  right: 0;
+  top: -20%;
+}
+
+.ground-brown-mushroom {
+  position: absolute;
+  left: 20%;
+  top: 38%;
+  width: 40px;
 }
 
 .pipe-left {
@@ -46,12 +81,6 @@ body {
   bottom: 120px;
   left: 0;
   z-index: -1;
-}
-
-.ground-mushroom {
-  position: absolute;
-  bottom: 210px;
-  right: 60px;
 }
 
 .pipe-right {
@@ -132,8 +161,6 @@ body {
 }
 
 .header-mariocoin-title {
-  font-family: "Mont-heavy";
-  font-size: 11px;
   text-align: center;
 }
 
@@ -173,10 +200,6 @@ body {
   );
 }
 
-.stat-card-title {
-  font-size: 11px;
-}
-
 .stat-card-value {
   display: flex;
   justify-content: center;
@@ -189,8 +212,7 @@ body {
 }
 
 .stat-card-value span {
-  font-family: "Mont-heavy";
-  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .total {
@@ -226,8 +248,8 @@ body {
 }
 
 .total-coins span {
-  font-family: "Mont-heavy";
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -276,9 +298,9 @@ body {
   border-radius: 30px;
 }
 
-.total-profile-lvl h5 span:nth-child(1) {
-  font-family: "Mont-heavy";
-  font-size: 18px;
+.total-profile-lvl h5 span {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .tap {
@@ -293,8 +315,7 @@ body {
 }
 
 #tap-effect {
-  transition: transform 0.3s ease-in-out;
-  display: inline-block;
+  transition: transform 0.05s ease;
   perspective: 1000px;
 }
 
@@ -346,7 +367,6 @@ footer {
 }
 
 .boost {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -357,14 +377,6 @@ footer {
   -webkit-backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.2);
   width: 100%;
-}
-
-.boost-mushroom {
-  position: absolute;
-  width: 40px;
-  left: 40px;
-  top: 0;
-  transform: translateY(-100%);
 }
 
 .boost-card {
@@ -398,6 +410,8 @@ footer {
 
 .boost-title {
   color: var(--color-white);
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .menu {
@@ -441,6 +455,7 @@ footer {
 .menu-item-title {
   color: var(--color-white);
   font-size: 15px;
+  font-weight: 200;
 }
 
 .active .menu-item-link .menu-item-img {
