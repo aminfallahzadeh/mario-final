@@ -1,5 +1,6 @@
 body {
   padding: 15px 25px;
+  /* position: relative; */
 }
 
 .cloud-1 {
@@ -88,6 +89,10 @@ body {
   bottom: 220px;
   right: 0;
   z-index: -1;
+}
+
+.main {
+  position: relative;
 }
 
 .header {
@@ -222,7 +227,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--color-white);
-  border-radius: 15px;
+  border-radius: 20px;
   backdrop-filter: blur(10px);
   background: linear-gradient(
     to bottom,
@@ -261,7 +266,7 @@ body {
   position: absolute;
   width: 98%;
   height: 5%;
-  bottom: 14%;
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 3px;
@@ -286,7 +291,7 @@ body {
 @media (max-width: 370px) {
   .total-lvl-bar {
     height: 3%;
-    bottom: 13%;
+    bottom: 18%;
   }
 }
 
@@ -317,8 +322,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 5px;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .total-profile-name {
@@ -343,16 +347,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 5px;
   border: 1px solid var(--color-white);
   background-color: var(--color-accent-2);
-  padding: 5px 15px;
+  padding: 1px 15px;
   border-radius: 30px;
 }
 
 .total-profile-lvl h5 span {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .tap {
@@ -368,7 +371,6 @@ body {
 
 #tap-effect {
   transition: transform 0.3s ease;
-  /* perspective: 1000px; */
 }
 
 .plus-one {
