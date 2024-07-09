@@ -29,7 +29,10 @@
 // });
 
 const img = document.getElementById("tap-effect");
+let totalCoinElement = document.getElementById("total-coin");
+
 let touchTimeout;
+totalCoins = 0;
 
 img.addEventListener("touchstart", (event) => {
   event.preventDefault();
@@ -50,6 +53,9 @@ img.addEventListener("touchstart", (event) => {
     setTimeout(() => {
       plusOne.remove();
     }, 1000);
+    // Increment total coins and update the display
+    totalCoins += 1;
+    totalCoinElement.innerText = totalCoins;
   });
 
   touchTimeout = setTimeout(() => {
