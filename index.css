@@ -1,6 +1,8 @@
 body {
   padding: 15px 19px;
-  /* position: relative; */
+  background-image: url("img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .cloud-1 {
@@ -399,7 +401,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 24px;
-  color: var(--color-accent-2);
+  color: var(--color-accent-1);
   opacity: 1;
   animation: moveUpFadeOut 1s ease-out forwards;
   text-shadow: -1px -1px 0 var(--color-accent-3),

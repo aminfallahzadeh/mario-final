@@ -1,6 +1,7 @@
 :root {
   /* COLORS */
   --color-white: #fff;
+  --color-black: #000;
 
   --color-bg-primary: #040617;
 
@@ -77,10 +78,6 @@ body {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
-
-  background-image: url("img/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   font-family: "Mont", sans-serif;
 }
 
