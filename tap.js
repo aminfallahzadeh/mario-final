@@ -11,7 +11,7 @@ totalCoinElement.innerText = numberWithCommas(totalCoins);
 
 img.addEventListener("touchstart", (event) => {
   event.preventDefault();
-  img.style.transform = "scale(0.95)";
+  img.style.transform = "scale(0.90)";
 
   Array.from(event.touches).forEach((touch) => {
     const touchX = touch.clientX;
@@ -36,7 +36,7 @@ img.addEventListener("touchstart", (event) => {
 
   touchTimeout = setTimeout(() => {
     img.style.transform = "scale(1)";
-  }, 100);
+  }, 150);
 });
 
 img.addEventListener("touchend", (event) => {
