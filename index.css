@@ -361,13 +361,19 @@ body {
 
 .tap {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 50%;
   transform: translate(-40%);
 }
 
 .tap img {
-  width: 300px;
+  width: 280px;
+}
+
+@media (max-height: 650px) {
+  .tap img {
+    width: 220px;
+  }
 }
 
 #tap-effect {
@@ -383,7 +389,6 @@ body {
   color: var(--color-accent-2);
   opacity: 1;
   animation: moveUpFadeOut 1s ease-out forwards;
-
   text-shadow: -1px -1px 0 var(--color-accent-3),
     1px -1px 0 var(--color-accent-3), -1px 1px 0 var(--color-accent-3),
     1px 1px 0 var(--color-accent-3);
@@ -406,20 +411,6 @@ body {
     transform: translate(-50%, -350%);
     opacity: 0;
   }
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0 19px;
-  margin-bottom: 10px;
 }
 
 .boost {
@@ -449,6 +440,12 @@ footer {
   );
 }
 
+@media (max-height: 650px) {
+  .boost {
+    padding: 5px 10px;
+  }
+}
+
 .boost-card {
   position: relative;
   padding: 2px 5px 2px 35px;
@@ -469,11 +466,27 @@ footer {
   width: 28px;
 }
 
+@media (max-height: 650px) {
+  .boost-img {
+    width: 20px;
+    top: -8px;
+    left: 12px;
+  }
+}
+
 .boost-img-potion {
   position: absolute;
   left: 0;
   top: -5px;
   width: 36px;
+}
+
+@media (max-height: 650px) {
+  .boost-img-potion {
+    width: 28px;
+    top: -3px;
+    left: 5px;
+  }
 }
 
 .boost-arrow {
@@ -492,10 +505,20 @@ footer {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background: rgba(149, 67, 26, 0.7);
-  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 19px;
+  right: 19px;
   border: 1px solid var(--color-white);
   border-radius: 50px;
   padding: 0 30px;
+}
+
+@media (max-height: 650px) {
+  .menu {
+    bottom: 8px;
+    padding: 0 20px;
+  }
 }
 
 .menu-list {
@@ -524,6 +547,12 @@ footer {
   width: 35px;
 }
 
+@media (max-height: 650px) {
+  .menu-item-img {
+    width: 25px;
+  }
+}
+
 .menu-item-title {
   color: var(--color-white);
   font-size: 13px;
@@ -534,6 +563,13 @@ footer {
   width: 50px;
   transform: translateY(-10px);
   filter: drop-shadow(0 0 22px var(--color-white));
+}
+
+@media (max-height: 650px) {
+  .active .menu-item-link .menu-item-img {
+    width: 40px;
+    transform: translateY(-5px);
+  }
 }
 
 .active .menu-item-link::after {
