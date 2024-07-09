@@ -1,38 +1,13 @@
-// const img = document.getElementById("tap-effect");
-// let touchTimeout;
-
-// img.addEventListener("touchstart", (event) => {
-//   event.preventDefault();
-//   img.style.transform = "scale(0.95)";
-// });
-
-// img.addEventListener("touchend", (event) => {
-//   event.preventDefault();
-//   img.style.transform = "scale(1)";
-
-//   Array.from(event.changedTouches).forEach((touch) => {
-//     const touchX = touch.clientX;
-//     const touchY = touch.clientY;
-
-//     const plusOne = document.createElement("div");
-//     plusOne.className = "plus-one";
-//     plusOne.innerText = "+1";
-//     document.body.appendChild(plusOne);
-
-//     plusOne.style.left = `${touchX}px`;
-//     plusOne.style.top = `${touchY}px`;
-
-//     setTimeout(() => {
-//       plusOne.remove();
-//     }, 1000);
-//   });
-// });
-
 const img = document.getElementById("tap-effect");
 let totalCoinElement = document.getElementById("total-coin");
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 let touchTimeout;
-totalCoins = 0;
+totalCoins = 1000;
+totalCoinElement.innerText = numberWithCommas(totalCoins);
 
 img.addEventListener("touchstart", (event) => {
   event.preventDefault();
@@ -53,9 +28,10 @@ img.addEventListener("touchstart", (event) => {
     setTimeout(() => {
       plusOne.remove();
     }, 1000);
+
     // Increment total coins and update the display
     totalCoins += 1;
-    totalCoinElement.innerText = totalCoins;
+    totalCoinElement.innerText = numberWithCommas(totalCoins);
   });
 
   touchTimeout = setTimeout(() => {
