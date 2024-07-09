@@ -1,5 +1,5 @@
 body {
-  padding: 15px 25px;
+  padding: 15px 19px;
   /* position: relative; */
 }
 
@@ -26,14 +26,6 @@ body {
   z-index: -1;
 }
 
-.ground-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-}
-
 .ground {
   position: absolute;
   bottom: 0;
@@ -46,14 +38,16 @@ body {
 .ground-bg {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .ground-mushroom {
   width: 30px;
   position: absolute;
-  top: 15%;
+  top: 14%;
   right: 15%;
   height: auto;
+  z-index: 1;
 }
 
 .ground-pipe-left {
@@ -136,7 +130,7 @@ body {
   background: -webkit-linear-gradient(
     to right,
     rgba(255, 255, 255, 0.5) 60%,
-    rgba(255, 255, 255, 0.4) 100%
+    rgba(255, 255, 255, 00) 100%
   );
 }
 
@@ -227,7 +221,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--color-white);
-  border-radius: 20px;
+  border-radius: 30px;
   backdrop-filter: blur(10px);
   background: linear-gradient(
     to bottom,
@@ -262,12 +256,17 @@ body {
   position: relative;
 }
 
+.total-lvl-progress {
+  position: relative;
+}
+
 .total-lvl-bar {
   position: absolute;
   width: 98%;
-  height: 5%;
-  bottom: 20%;
+  height: 20%;
+  bottom: 50%;
   left: 50%;
+  z-index: 10;
   transform: translateX(-50%);
   border-radius: 3px;
   background: -webkit-linear-gradient(
@@ -290,8 +289,7 @@ body {
 
 @media (max-width: 370px) {
   .total-lvl-bar {
-    height: 3%;
-    bottom: 18%;
+    height: 13%;
   }
 }
 
@@ -300,6 +298,7 @@ body {
   position: absolute;
   top: -2px;
   right: -1px;
+  z-index: 10;
 }
 
 @media (max-width: 370px) {
@@ -326,13 +325,15 @@ body {
 }
 
 .total-profile-name {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 5px;
   border: 1px solid var(--color-white);
   border-radius: 30px;
-  padding: 1px 5px;
+  padding: 2px 6px;
+  background-color: var(--color-sky);
 }
 
 .total-profile img {
@@ -417,37 +418,55 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: 10px 20px;
+  padding: 0 19px;
+  margin-bottom: 10px;
 }
 
 .boost {
   display: flex;
+  position: absolute;
+  z-index: 12;
+  top: 50%;
+  left: 19px;
+  right: 19px;
   justify-content: space-between;
   align-items: center;
   border: 1px solid var(--color-white);
   border-radius: 30px;
-  padding: 8px 35px;
+  padding: 8px 15px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.2);
-  width: 100%;
+  background: rgba(255, 243, 105, 0.5);
+  background: linear-gradient(
+    to left,
+    rgba(255, 243, 105, 0.5) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    to left,
+    rgba(255, 243, 105, 0.5) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .boost-card {
   position: relative;
-  border: 1px solid var(--color-white);
-  padding: 5px 5px 5px 35px;
+  padding: 2px 5px 2px 35px;
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.boost-card:not(:first-child) {
+  border: 1px solid var(--color-white);
+}
+
 .boost-img {
   position: absolute;
   left: 5px;
   top: -12px;
-  width: 30px;
+  width: 28px;
 }
 
 .boost-img-potion {
@@ -464,15 +483,15 @@ footer {
 
 .boost-title {
   color: var(--color-white);
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 200;
 }
 
 .menu {
   display: flex;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(149, 67, 26, 0.7);
   width: 100%;
   border: 1px solid var(--color-white);
   border-radius: 50px;
@@ -507,7 +526,7 @@ footer {
 
 .menu-item-title {
   color: var(--color-white);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 200;
 }
 

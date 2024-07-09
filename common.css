@@ -8,6 +8,9 @@
 
   --color-accent-1: #c70601;
   --color-accent-2: #ffe085;
+
+  --color-sky: #88e0fa;
+  --color-ground: #95431a;
 }
 
 @font-face {
