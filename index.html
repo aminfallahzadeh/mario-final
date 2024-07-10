@@ -34,7 +34,7 @@
         <div class="boost">
             <div class="boost-card">
                 <img src="img/light.png" alt="Light" class="boost-img" />
-                <span class="boost-title">170/500</span>
+                <p class="boost-title"><span id="current-energy"></span>/<span id="max-energy"></span></p>
             </div>
 
             <div class="boost-card">
@@ -107,10 +107,9 @@
         <section class="stats">
             <div class="stat-card">
                 <h5 class="stat-card-title">Earn per tap</h5>
-
                 <div class="stat-card-value">
                     <img src="img/coin.png" alt="Coin" />
-                    <span>+1</span>
+                    <p>+ <span id="per-tap-value"></span></p>
                 </div>
 
             </div>
@@ -120,7 +119,7 @@
 
                 <div class="stat-card-value">
                     <img src="img/coin.png" alt="Coin" />
-                    <span>450k</span>
+                    <p><span id="coins-to-lvl-up"></span></p>
                 </div>
 
             </div>
@@ -129,7 +128,7 @@
                 <h5 class="stat-card-title">Profit per hour</h5>
                 <div class="stat-card-value">
                     <img src="img/coin.png" alt="Coin" />
-                    <span>0</span>
+                    <p><span id="profit-per-hour"></span></p>
                 </div>
 
             </div>
@@ -149,12 +148,12 @@
                     </div>
 
                     <div class="total-profile-lvl">
-                        <h5>Level <span>1</span>/9</h5>
+                        <h5>Level <span id="current-lvl"></span>/9</h5>
                     </div>
                 </div>
 
                 <div class="total-lvl-progress">
-                    <div class="total-lvl-bar">
+                    <div class="total-lvl-bar" id="experience">
                         <img src="img/flag-red.png" alt="Flag" class="total-lvl-bar-flag" />
                     </div>
                     <img src="img/loading.png" alt="Experience" class="total-lvl-bar-container" />

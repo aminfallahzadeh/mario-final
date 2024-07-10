@@ -1,15 +1,73 @@
-const img = document.getElementById("tap-effect");
-let totalCoinElement = document.getElementById("total-coin");
-
+// helpers
+// SEPARATE NUMBERS WITH COMMA
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-let touchTimeout;
-totalCoins = 1000;
-totalCoinElement.innerText = numberWithCommas(totalCoins);
+// FORMAT BIG NUMBERS WITH K AND M
+function kFormatter(num) {
+  if (Math.abs(num) > 999 && Math.abs(num) < 999_999) {
+    return Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + "k";
+  } else if (Math.abs(num) > 999_999 && Math.abs(num) < 999_999_999) {
+    return Math.sign(num) * (Math.abs(num) / 1_000_000).toFixed(1) + "m";
+  } else if (Math.abs(num) > 999_999_999) {
+    return Math.sign(num) * (Math.abs(num) / 1_000_000_000).toFixed(1) + "b";
+  } else {
+    return Math.sign(num) * Math.abs(num);
+  }
+}
 
+// ELEMENTS
+const img = document.getElementById("tap-effect");
+let totalCoinElement = document.getElementById("total-coin");
+let earnPerTapElement = document.getElementById("per-tap-value");
+let coinsToLvlUpElement = document.getElementById("coins-to-lvl-up");
+let profitPerHourElement = document.getElementById("profit-per-hour");
+let currentLvlElement = document.getElementById("current-lvl");
+let experienceElement = document.getElementById("experience");
+let currentEnergyElement = document.getElementById("current-energy");
+let maxEnergyElement = document.getElementById("max-energy");
+
+// TIME OUT
+let touchTimeout;
+
+// COIN VALUES
+totalCoins = 1000;
+earnPerTap = 5;
+coinsToLvlUp = 15_000;
+profitPerHour = 0;
+currentLvl = 1;
+
+currentEnergy = 500;
+maxEnergy = 500;
+
+let experience = (totalCoins / coinsToLvlUp) * 100;
+experience = experience.toFixed(2);
+
+// INITIAL VALUES ON SCREEN
+totalCoinElement.innerText =
+  totalCoins >= 10_000_000
+    ? kFormatter(totalCoins)
+    : numberWithCommas(totalCoins);
+earnPerTapElement.innerText = numberWithCommas(earnPerTap);
+coinsToLvlUpElement.innerText = kFormatter(coinsToLvlUp);
+profitPerHourElement.innerText = kFormatter(profitPerHour);
+currentLvlElement.innerText = currentLvl;
+currentEnergyElement.innerText = currentEnergy;
+maxEnergyElement.innerText = maxEnergy;
+
+experienceElement.style.width =
+  experience < 10 ? "10%" : experience > 98 ? "98%" : `${experience}%`;
+
+console.log(experience);
+
+// TAP TO EARN LOGIC & ANIMATION
 img.addEventListener("touchstart", (event) => {
+  // check if user has enery left
+  if (currentEnergy === 0) {
+    return;
+  }
+
   event.preventDefault();
   img.style.transform = "scale(0.90)";
 
@@ -19,7 +77,7 @@ img.addEventListener("touchstart", (event) => {
 
     const plusOne = document.createElement("div");
     plusOne.className = "plus-one";
-    plusOne.innerText = "+1";
+    plusOne.innerText = "+" + earnPerTap;
     document.body.appendChild(plusOne);
 
     plusOne.style.left = `${touchX}px`;
@@ -30,8 +88,19 @@ img.addEventListener("touchstart", (event) => {
     }, 1000);
 
     // Increment total coins and update the display
-    totalCoins += 1;
+    totalCoins += earnPerTap;
     totalCoinElement.innerText = numberWithCommas(totalCoins);
+
+    // Decrement current energy and update the display
+    currentEnergy -= 1;
+    currentEnergyElement.innerText = currentEnergy;
+
+    // Calculate experience with each tap
+    experience = `${((totalCoins / coinsToLvlUp) * 100).toFixed(2)}`;
+    experienceElement.style.width =
+      experience < 10 ? "10%" : experience > 98 ? "98%" : `${experience}%`;
+
+    console.log(experience);
   });
 
   touchTimeout = setTimeout(() => {
@@ -43,3 +112,4 @@ img.addEventListener("touchend", (event) => {
   clearTimeout(touchTimeout);
   img.style.transform = "scale(1)";
 });
+``;
