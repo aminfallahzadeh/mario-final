@@ -114,4 +114,11 @@ img.addEventListener("touchend", (event) => {
   clearTimeout(touchTimeout);
   img.style.transform = "scale(1)";
 });
-``;
+
+// INCREMENT ENERGY ONE PER SECOND
+setInterval(() => {
+  if (currentEnergy < maxEnergy) {
+    currentEnergy++;
+    currentEnergyElement.innerText = currentEnergy;
+  }
+}, 1000);
