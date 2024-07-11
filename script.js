@@ -33,13 +33,13 @@ let touchTimeout;
 
 // COIN VALUES
 totalCoins = 1000;
-earnPerTap = 5;
+earnPerTap = 3;
 coinsToLvlUp = 15_000;
 profitPerHour = 0;
 currentLvl = 1;
 
-currentEnergy = 500;
-maxEnergy = 500;
+currentEnergy = 100;
+maxEnergy = 100;
 
 let experience = (totalCoins / coinsToLvlUp) * 100;
 experience = experience.toFixed(2);
@@ -64,7 +64,7 @@ console.log(experience);
 // TAP TO EARN LOGIC & ANIMATION
 img.addEventListener("touchstart", (event) => {
   // check if user has enery left
-  if (currentEnergy === 0) {
+  if (currentEnergy < earnPerTap) {
     return;
   }
 
@@ -92,8 +92,10 @@ img.addEventListener("touchstart", (event) => {
     totalCoinElement.innerText = numberWithCommas(totalCoins);
 
     // Decrement current energy and update the display
-    currentEnergy -= 1;
-    currentEnergyElement.innerText = currentEnergy;
+    if (currentEnergy >= earnPerTap) {
+      currentEnergy -= earnPerTap;
+      currentEnergyElement.innerText = currentEnergy;
+    }
 
     // Calculate experience with each tap
     experience = `${((totalCoins / coinsToLvlUp) * 100).toFixed(2)}`;
