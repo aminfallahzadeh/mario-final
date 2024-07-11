@@ -38,8 +38,8 @@ coinsToLvlUp = 15_000;
 profitPerHour = 0;
 currentLvl = 1;
 
-currentEnergy = 100;
-maxEnergy = 100;
+currentEnergy = 500;
+maxEnergy = 500;
 
 let experience = (totalCoins / coinsToLvlUp) * 100;
 experience = experience.toFixed(2);
