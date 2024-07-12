@@ -90,15 +90,15 @@
         <div class="cards-container">
             <div class="cards-nav">
                 <ul class="cards-nav-list">
-                    <li class="cards-nav-item active-cards">
-                        <a href="#">
+                    <li class="cards-nav-item active-cards" id="my-cards-link">
+                        <a href="#" id="my-cards-link">
                             My Cards
                         </a>
                     </li>
-                    <li class="cards-nav-item"> <a href="#">
+                    <li class="cards-nav-item" id="new-cards-link"> <a href="#">
                             New Cards
                         </a></li>
-                    <li class="cards-nav-item"> <a href="#">
+                    <li class="cards-nav-item" id="flag-cards-link"> <a href="#">
                             Flag Cards
                         </a></li>
                     <li class="cards-nav-item"> <a href="#">
@@ -110,7 +110,7 @@
 
             <ul class="cards-list" id="my-cards">
                 <li class="card-item" a>
-                    <img src="../img/cards/card-1.jpg" />
+                    <img src="../img/my-cards/card-1.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card1</span>
@@ -131,7 +131,7 @@
                     </div>
                 </li>
                 <li class="card-item" b>
-                    <img src="../img/cards/card-2.jpg" />
+                    <img src="../img/my-cards/card-2.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card2</span>
@@ -152,7 +152,7 @@
                 </li>
 
                 <li class="card-item" c>
-                    <img src="../img/cards/card-3.jpg" />
+                    <img src="../img/my-cards/card-3.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card3</span>
@@ -172,7 +172,7 @@
                     </div>
                 </li>
                 <li class="card-item" d>
-                    <img src="../img/cards/card-4.jpg" />
+                    <img src="../img/my-cards/card-4.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card4</span>
@@ -192,7 +192,7 @@
                     </div>
                 </li>
                 <li class="card-item" e>
-                    <img src="../img/cards/card-5.jpg" />
+                    <img src="../img/my-cards/card-5.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card5</span>
@@ -212,7 +212,7 @@
                     </div>
                 </li>
                 <li class="card-item" f>
-                    <img src="../img/cards/card-6.jpg" />
+                    <img src="../img/my-cards/card-6.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card6</span>
@@ -232,7 +232,7 @@
                     </div>
                 </li>
                 <li class="card-item" g>
-                    <img src="../img/cards/card-7.jpg" />
+                    <img src="../img/my-cards/card-7.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card7</span>
@@ -252,7 +252,7 @@
                     </div>
                 </li>
                 <li class="card-item" h>
-                    <img src="../img/cards/card-8.jpg" />
+                    <img src="../img/my-cards/card-8.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card8</span>
@@ -273,7 +273,7 @@
                 </li>
 
                 <li class="card-item" i>
-                    <img src="../img/cards/card-9.jpg" />
+                    <img src="../img/my-cards/card-9.jpg" />
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card9</span>
@@ -294,10 +294,258 @@
                 </li>
 
                 <li class="card-item" j>
-                    <img src="../img/cards/card-10.jpg" />
+                    <img src="../img/my-cards/card-10.jpg" />
+                    <div class="lock-overlay">
+                        <div class="overlay-title">
+                            <img src="../img/lock.png" alt="Lock" />
+                            <h5>Locked</h5>
+                        </div>
+                    </div>
                     <div class="card-info">
                         <h5>Mini Mario</h5>
                         <span>card10</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="cards-list hidden" id="new-cards">
+                <li class="card-item" aa>
+                    <img src="../img/new-cards/card-1.png" />
+                    <div class="card-info">
+                        <h5>Shy Mushroom</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" ab>
+                    <img src="../img/new-cards/card-2.png" />
+                    <div class="card-info">
+                        <h5>Mario Mafia</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" ac>
+                    <img src="../img/new-cards/card-3.png" />
+                    <div class="card-info">
+                        <h5>Buisness Mario</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" ad>
+                    <img src="../img/new-cards/card-4.png" />
+                    <div class="card-info">
+                        <h5>Mario Pixley</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" ae>
+                    <img src="../img/new-cards/card-5.png" />
+                    <div class="card-info">
+                        <h5>Princess Kiss</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" af>
+                    <img src="../img/new-cards/card-6.png" />
+                    <div class="card-info">
+                        <h5>Detective Mario</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" ag>
+                    <img src="../img/new-cards/card-7.png" />
+                    <div class="card-info">
+                        <h5>Mario Nostalgia</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" ah>
+                    <img src="../img/new-cards/card-8.png" />
+                    <div class="card-info">
+                        <h5>Mario Goldman</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="card-item" ai>
+                    <img src="../img/new-cards/card-9.png" />
+                    <div class="card-info">
+                        <h5>Mario Real Face</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="card-item" aj>
+                    <img src="../img/new-cards/card-10.png" />
+                    <div class="lock-overlay">
+                        <div class="overlay-title">
+                            <img src="../img/lock.png" alt="Lock" />
+                            <h5>Locked</h5>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5>Mario Jumping</h5>
+                        <span>card1</span>
+                        <div class="card-info-profit">
+                            <span>Profit per hour</span>
+                            <img src="../img/card-coin.png" />
+                            <h5>50 $</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-info-footer">
+                        <h5>lvl1</h5>
+                        <div class="card-info-footer-value">
+                            <img src="../img/card-coin.png" />
+                            <h5>2.1k</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="cards-list hidden" id="flag-cards-list">
+                <li class="card-item" ba>
+                    <img src="../img/flag-cards/cards-1.png" />
+                    <div class="card-info">
+                        <h5>Mini Mario</h5>
+                        <span>card1</span>
                         <div class="card-info-profit">
                             <span>Profit per hour</span>
                             <img src="../img/card-coin.png" />
