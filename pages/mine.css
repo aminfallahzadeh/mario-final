@@ -10,7 +10,6 @@ body {
   justify-content: center;
   height: 100%;
   padding: 19px;
-  position: relative;
 }
 
 .header {
@@ -186,7 +185,7 @@ body {
 .cards-nav {
   z-index: 10;
   display: flex;
-  position: fixed;
+  position: absolute;
   top: 10px;
   left: 10px;
   right: 10px;
@@ -270,19 +269,12 @@ body {
 
 .cards-list {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   overflow-y: scroll;
   margin-top: 50px;
-}
-
-@media (max-width: 309px) {
-  .cards-list {
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 .card-item {
