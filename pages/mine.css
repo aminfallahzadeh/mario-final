@@ -44,9 +44,25 @@ body {
   border-radius: 30px;
 }
 
+@media (max-width: 375px) {
+  .lvl-number {
+    padding: 1px 10px;
+  }
+}
+
 .lvl-number h5 span {
   font-size: 16px;
   font-weight: 500;
+}
+
+@media (max-width: 335px) {
+  .lvl-number h5 span {
+    font-size: 14px;
+  }
+
+  .lvl-number h5 {
+    font-size: 14px;
+  }
 }
 
 .lvl-progress {
@@ -217,27 +233,29 @@ body {
 }
 
 .cards-nav-item {
-  padding: 3px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
   border-radius: 8px;
   border: 1px solid transparent;
-  text-align: center;
 }
 
 @media (max-width: 435px) {
   .cards-nav-item {
-    padding: 3px 10px;
+    padding: 5px 10px;
   }
 }
 
 @media (max-width: 390px) {
   .cards-nav-item {
-    padding: 3px 5px;
+    padding: 5px 8px;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 370px) {
   .cards-nav-item {
-    padding: 0 5px;
+    padding: 5px;
   }
 }
 
@@ -283,6 +301,12 @@ body {
 @media (max-width: 420px) {
   .card-item {
     padding: 10px 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-item {
+    padding: 5px 10px;
   }
 }
 
@@ -357,6 +381,12 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .card-item img {
+    width: 70px;
+  }
+}
+
 .card-info {
   position: relative;
   display: flex;
@@ -377,10 +407,22 @@ body {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 375px) {
+  .card-info::after {
+    width: 100%;
+  }
+}
+
 .card-info h5 {
   color: var(--color-white);
   font-size: 14px;
   font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  .card-info h5 {
+    font-size: 12px;
+  }
 }
 
 .card-info span {
@@ -388,6 +430,12 @@ body {
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 300;
+}
+
+@media (max-width: 375px) {
+  .card-info span {
+    font-size: 8px;
+  }
 }
 
 .card-info-profit {
@@ -406,6 +454,12 @@ body {
   width: 15px;
 }
 
+@media (max-width: 375px) {
+  .card-info-profit img {
+    width: 10px;
+  }
+}
+
 .card-info-footer {
   display: flex;
   justify-content: left;
@@ -420,6 +474,12 @@ body {
 
 .card-info-footer img {
   width: 20px;
+}
+
+@media (max-width: 375px) {
+  .card-info-footer img {
+    width: 15px;
+  }
 }
 
 .card-info-footer-value {
@@ -440,4 +500,8 @@ body {
   bottom: 0;
   left: -8px;
   transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
 }
