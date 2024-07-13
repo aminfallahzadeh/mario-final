@@ -19,11 +19,13 @@
   src: url("font/Mont-ExtraLight.ttf") format("truetype");
   font-weight: 100;
 }
+
 @font-face {
   font-family: "Mont";
   src: url("font/Mont-Light.ttf") format("truetype");
   font-weight: 200;
 }
+
 @font-face {
   font-family: "Mont";
   src: url("font/Mont-Thin.ttf") format("truetype");
@@ -49,25 +51,28 @@
   src: url("font/Mont-SemiBold.ttf") format("truetype");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "Mont";
   src: url("font/Mont-Bold.ttf") format("truetype");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "Mont";
   src: url("font/Mont-Heavy.ttf") format("truetype");
   font-weight: 700;
 }
+
 @font-face {
   font-family: "Mont";
   src: url("font/Mont-Black.ttf") format("truetype");
   font-weight: 800;
 }
 
-html {
-  height: 100vh;
-}
+/* html {
+  height: 100%;
+} */
 
 * {
   padding: 0;
@@ -83,35 +88,15 @@ body {
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   font-family: "Mont", sans-serif;
+  height: 100vh;
   background: #ffffff;
   background: -webkit-linear-gradient(0deg, #ffffff 0%, #1ec6f8 100%);
   background: linear-gradient(0deg, #ffffff 0%, #1ec6f8 100%);
+  background-repeat: no-repeat;
 }
 
 a {
   text-decoration: none !important;
-}
-
-.blue-background {
-  background-color: var(--color-bg-secondary);
-  position: absolute;
-  top: 120px;
-  bottom: 0;
-  width: 100%;
-  border-radius: 50px 50px 0 0;
-  border-top: 1px solid var(--color-blue-border);
-}
-
-@media (max-height: 850px) {
-  .blue-background {
-    top: 70px;
-  }
-}
-
-@media (max-height: 720px) {
-  .blue-background {
-    top: 50px;
-  }
 }
 
 h1,
