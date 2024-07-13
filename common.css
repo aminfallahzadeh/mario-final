@@ -70,16 +70,10 @@
   font-weight: 800;
 }
 
-/* html {
-  height: 100%;
-} */
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 body {
@@ -336,6 +330,7 @@ li {
   -ms-user-select: none;
   user-select: none;
 }
+
 .noSelect:focus {
   outline: none !important;
 }

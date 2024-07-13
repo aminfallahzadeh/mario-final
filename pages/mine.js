@@ -57,16 +57,3 @@ specialsLink.addEventListener("click", () => {
   flagCardsLink.classList.remove("active-cards");
   specialsLink.classList.add("active-cards");
 });
-
-// ADJUST CARD TITLE SIZE BASED ON TITLE WIDTH
-const cardTitle = document.querySelectorAll(".card-item h5");
-
-cardTitle.forEach((title) => {
-  if (title.textContent.length > 14 && title.textContent.length < 18) {
-    title.style.fontSize = "12px";
-  } else if (title.textContent.length > 18) {
-    title.style.fontSize = "11px";
-  } else {
-    title.style.fontSize = "";
-  }
-});
