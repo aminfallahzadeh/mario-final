@@ -20,6 +20,7 @@ body {
   border: 1px solid var(--color-white);
   border-radius: 30px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.5) 60%,
@@ -126,6 +127,7 @@ body {
   border: 1px solid var(--color-white);
   border-radius: 20px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.2) 60%,
@@ -160,6 +162,7 @@ body {
   padding: 10px;
   border-radius: 20px;
   backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.4);
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
@@ -196,16 +199,8 @@ body {
   border-radius: 13px;
   padding: 5px 10px;
   backdrop-filter: blur(10px);
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.5) 60%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  background: -webkit-linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.5) 60%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .cards-nav-list {
