@@ -11,6 +11,42 @@ body {
   padding: 19px;
 }
 
+.share-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.invite-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  border: 1px solid var(--color-white);
+  padding: 18px 35px;
+  border-radius: 40px;
+  background: #3b3b3b;
+  background: -webkit-linear-gradient(0deg, #3b3b3b 0%, #171716 100%);
+  background: linear-gradient(0deg, #3b3b3b 0%, #171716 100%);
+}
+
+@media (max-width: 435px) {
+  .invite-card {
+    padding: 18px 20px;
+  }
+}
+
+.invite-card span {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.invite-card img {
+  width: 20px;
+}
+
 .friends-container {
   position: relative;
   margin-top: 70px;
@@ -205,4 +241,82 @@ body {
   justify-content: center;
   align-items: center;
   row-gap: 10px;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.friend-card {
+  border: 1px solid var(--color-white);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.friend-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.friend-user-img {
+  width: 42px;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(216, 200, 200, 0.6);
+}
+
+.friend-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  row-gap: 1px;
+  margin-top: 5px;
+}
+
+.friend-desc h5 {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.friend-desc img {
+  width: 28px;
+}
+
+.friend-desc-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.friend-desc-sub span {
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.friend-coins {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.friend-coins img {
+  width: 40px;
+}
+
+.friend-coins span {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 200;
 }
