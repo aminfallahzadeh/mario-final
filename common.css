@@ -9,6 +9,7 @@
 
   --color-accent-1: #c70601;
   --color-accent-2: #ffe085;
+  --color-accent-3: #00f30a;
 
   --color-sky: #88e0fa;
   --color-ground: #95431a;
@@ -174,7 +175,7 @@ li {
 }
 
 .cloud-1 {
-  position: absolute;
+  position: fixed;
   top: 11%;
   left: 50%;
   transform: translateX(-50%);
@@ -183,14 +184,14 @@ li {
 }
 
 .cloud-2 {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 40%;
   z-index: -1;
 }
 
 .cloud-3 {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 45%;
   z-index: -1;

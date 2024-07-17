@@ -1,0 +1,230 @@
+.main {
+  padding: 19px 12px;
+}
+
+.earn-container {
+  position: relative;
+  border: 1px solid var(--color-white);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 12px;
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  overscroll-behavior: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-bottom: 60px;
+}
+
+.task-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 6px;
+}
+
+.earn-container-title {
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  width: 100%;
+}
+
+.youtube-card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.youtube-card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.youtube-card-img {
+  width: 45px;
+}
+
+.youtube-card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  row-gap: 5px;
+}
+
+.youtube-card-desc {
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.youtube-card-bonus {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  column-gap: 5px;
+}
+
+.youtube-card-bonus-img {
+  width: 20px;
+}
+
+.youtube-card-bonus-value {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.youtube-card-btn {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  padding: 5px;
+  width: 22px;
+}
+
+.not-received {
+  color: var(--color-accent-1);
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.received {
+  color: var(--color-accent-3);
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.task-note-image {
+  width: 38px;
+}
+
+.tasks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  row-gap: 25px;
+  margin-top: 10px;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 40px 40px 10px 40px;
+  border-radius: 30px;
+}
+
+@media (max-width: 455px) {
+  .task-card {
+    padding: 40px 30px 10px 30px;
+  }
+}
+
+@media (max-width: 415px) {
+  .task-card {
+    padding: 40px 20px 10px 20px;
+  }
+}
+
+.task-image {
+  width: 58px;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.task-card-title {
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 400;
+  width: 15ch;
+  text-align: center;
+}
+
+.task-card-desc {
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.task-card-bonus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3px 20px;
+  border-radius: 30px;
+}
+
+.task-card-bonus-img {
+  width: 20px;
+}
+
+.task-card-bonus-value {
+  line-height: 0;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.task-card[a] {
+  background: #0398bb;
+  background: -webkit-linear-gradient(90deg, #0398bb 0%, #36caec 100%);
+  background: linear-gradient(90deg, #0398bb 0%, #36caec 100%);
+}
+
+.task-card[b] {
+  background: #da3545;
+  background: -webkit-linear-gradient(70deg, #da3545 0%, #af1b29 100%);
+  background: linear-gradient(70deg, #da3545 0%, #af1b29 100%);
+}
+
+.task-card[c] {
+  background: #1b1b1b;
+  background: -webkit-linear-gradient(90deg, #1b1b1b 0%, #3f3f40 100%);
+  background: linear-gradient(90deg, #1b1b1b 0%, #3f3f40 100%);
+}
+
+.task-card[d] {
+  background: #8870e3;
+  background: -webkit-linear-gradient(90deg, #8870e3 0%, #5844b6 100%);
+  background: linear-gradient(90deg, #8870e3 0%, #5844b6 100%);
+}
