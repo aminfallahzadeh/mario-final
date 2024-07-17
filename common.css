@@ -235,6 +235,7 @@ li {
   bottom: 18px;
   left: 19px;
   right: 19px;
+  row-gap: 8px;
 }
 
 .menu {
