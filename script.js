@@ -32,7 +32,7 @@ let maxEnergyElement = document.getElementById("max-energy");
 let touchTimeout;
 
 // COIN VALUES
-totalCoins = 1000;
+totalCoins = 1000000;
 earnPerTap = 3;
 coinsToLvlUp = 15_000;
 profitPerHour = 0;
