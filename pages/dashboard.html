@@ -7,14 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="dashboard.css" rel="stylesheet">
     <link href="../common.css" rel="stylesheet">
-    <script>
-        var search = Telegram.WebApp.initData
-        var converted = JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g, '":"') + '"}', function (key, value) { return key === "" ? value : decodeURIComponent(value) })
-        var obj = JSON.parse(converted.user).id;
-        console.log(obj)
-        var obj_name = JSON.parse(converted.user).first_name;
-        var obj_family = JSON.parse(converted.user).last_name;
-    </script>
 </head>
 
 <body>
@@ -42,9 +34,11 @@
                     </div>
 
                     <div class="boost-card">
+                        <a href="boost.html" class="boost-card-link"></a>
                         <img src="../img/potion.png" alt="Potion" class="boost-img-potion" />
                         <span class="boost-title">Boost</span>
                         <img src="../img/left-arrow.png" alt="Arrow" class="boost-arrow" />
+
                     </div>
                 </div>
 
@@ -166,16 +160,7 @@
             </section>
         </main>
     </div>
-    <script>
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('dashboard').style.display = 'block';
-            }, 3000);
-        });
-    </script>
     <script src="script.js" type="text/javascript"></script>
-
 </body>
 
 </html>
