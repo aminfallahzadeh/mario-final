@@ -38,7 +38,7 @@
                 <h5 class="booster-title">Energy Limit</h5>
                 <span class="booster-lvl">level 14</span>
 
-                <div class="booster-coins-container">
+                <div class="booster-coins-container" id="open-energy-modal">
                     <div class="booster-coins">
                         <img src="../img/coin.png" alt="Coin" class="booster-coins-img" />
                         <span class="booster-coins-amount">500,000</span>
@@ -53,7 +53,7 @@
                 <h5 class="booster-title">Recharging Speed</h5>
                 <span class="booster-lvl">level 14</span>
 
-                <div class="booster-coins-container">
+                <div class="booster-coins-container" id="open-recharge-modal">
                     <div class="booster-coins">
                         <img src="../img/coin.png" alt="Coin" class="booster-coins-img" />
                         <span class="booster-coins-amount">500,000</span>
@@ -87,6 +87,7 @@
                         <h5 class="daily-booster-title">Full<br />
                             Tank</h5>
                         <p class="daily-booster-lvl"><span>2</span>/<span>3</span></p>
+                        <div class="exp-bar" a></div>
                     </li>
 
                     <li class="daily-booster-card item-bg">
@@ -94,17 +95,84 @@
                         <h5 class="daily-booster-title">Tapping<br />
                             Guru</h5>
                         <p class="daily-booster-lvl"><span>1</span>/<span>3</span></p>
+                        <div class="exp-bar" b></div>
                     </li>
                 </ul>
             </li>
 
 
             <li class="booster-grid-cancel item-bg">
+                <a href="dashboard.html" class="cancel-btn"></a>
                 <h5 class="cancel-title">cancel</h5>
             </li>
         </ul>
+
+        <div class="overlay hidden" id="overlay"></div>
+
+        <div class="energy-modal hidden" id="energy-modal">
+            <img src="../img/energy-modal-img.png" alt="Energy" class="energy-modal-img" />
+
+            <div>
+                <h5 class="modal-title">Energy Limit</h5>
+
+                <p class="modal-text">increase the amount of energy</p>
+            </div>
+
+            <p class="modal-text">+500 energy points for level1</p>
+
+            <div class="energy-cost">
+                <div class="cost-coins">
+                    <img src="../img/coin.png" alt="Coin" class="cost-coins-img" />
+                    <span class="cost-coins-amount">+500</span>
+                </div>
+
+                <h5 class="cost-title">lvl 1</h5>
+            </div>
+
+            <div class="energy-buttons">
+                <div class="btn" a>
+                    <span class="btn-text">Go ahead</span>
+                </div>
+
+                <div class="btn close-modal" b>
+                    <span class="btn-text">cancel</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="energy-modal hidden" id="recharge-modal">
+            <img src="../img/recharg-modal-img.png" alt="Energy" class="energy-modal-img" />
+
+            <div>
+                <h5 class="modal-title">Full Energy</h5>
+
+                <p class="modal-text">Recharge your energy to the maximum and do another round of mining</p>
+            </div>
+
+            <p class="modal-text">+1 coin for tap for level1</p>
+
+            <div class="energy-cost">
+                <div class="cost-coins">
+                    <img src="../img/coin.png" alt="Coin" class="cost-coins-img" />
+                    <span class="cost-coins-amount">free</span>
+                </div>
+
+                <h5 class="cost-title">lvl 1</h5>
+            </div>
+
+            <div class="energy-buttons">
+                <div class="btn" a>
+                    <span class="btn-text">Go ahead</span>
+                </div>
+
+                <div class="btn close-modal" b>
+                    <span class="btn-text">cancel</span>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <script src="boost.js" type="text/javascript"></script>
 </body>
 
 </html>

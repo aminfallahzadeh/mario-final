@@ -41,13 +41,13 @@
   justify-content: center;
   align-items: center;
   column-gap: 10px;
-  padding: 20px 50px;
+  padding: 30px 50px;
   text-overflow: ellipsis;
   overflow-x: hidden;
 }
 
 .total-coin-img {
-  width: 40px;
+  width: 45px;
 }
 
 .total-coin {
@@ -119,6 +119,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 50px;
+  cursor: pointer;
 }
 
 .booster-arrow {
@@ -131,6 +132,7 @@
 .booster-grid-cancel {
   border-radius: 16px;
   padding: 18px;
+  position: relative;
 }
 
 .cancel-title {
@@ -179,6 +181,7 @@
   row-gap: 10px;
   width: 80px;
   padding: 10px;
+  overflow: hidden;
 }
 
 .daily-booster-title {
@@ -200,11 +203,10 @@
 .exp-bar {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-color: red;
   left: 0;
   bottom: 0;
-  border-radius: 20px;
   z-index: -1;
 }
 
@@ -218,4 +220,140 @@
   background: #ffa51e;
   background: -webkit-linear-gradient(180deg, #ffdf76 0%, #ffa51e 100%);
   background: linear-gradient(180deg, #ffdf76 0%, #ffa51e 100%);
+}
+
+.cancel-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.energy-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  padding: 40px 20px 20px 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(109, 109, 109, 0.2);
+  border-radius: 20px;
+  width: 60%;
+}
+
+.energy-modal-img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-title {
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-text {
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 200;
+  text-align: center;
+  width: 100%;
+}
+
+.energy-cost {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 7px 18px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cost-coins {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.cost-coins-img {
+  width: 25px;
+}
+
+.cost-coins-amount {
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 200;
+  text-align: center;
+  width: 100%;
+}
+
+.cost-title {
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.energy-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+.btn-text {
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: 200;
+}
+
+.btn[a] {
+  background: #9e2a27;
+  background: -webkit-linear-gradient(-90deg, #ec5653 0%, #9e2a27 100%);
+  background: linear-gradient(-90deg, #ec5653 0%, #9e2a27 100%);
+}
+
+.btn[b] {
+  background-color: rgba(0, 0, 0, 0.5);
 }
