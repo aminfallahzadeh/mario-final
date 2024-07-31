@@ -182,6 +182,7 @@
   width: 80px;
   padding: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .daily-booster-title {
@@ -356,4 +357,31 @@
 
 .btn[b] {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#coins-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.coin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/coin.png");
+  background-size: cover;
+  opacity: 0;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }

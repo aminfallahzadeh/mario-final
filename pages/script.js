@@ -60,59 +60,60 @@ document.addEventListener("DOMContentLoaded", function () {
   experienceElement.style.width =
     experience < 10 ? "10%" : experience > 98 ? "98%" : `${experience}%`;
 
+  img.style.transform = "scale(1)";
+
   // TAP TO EARN LOGIC & ANIMATION
-  img.addEventListener("touchstart", (event) => {
-    // check if user has enery left
+  const handleImgClick = (e) => {
+    const img = e.currentTarget;
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    // Check if user has energy left
     if (currentEnergy < earnPerTap) {
       return;
     }
 
-    event.preventDefault();
-    img.style.transform = "scale(0.90)";
+    img.style.transform = `perspective(1000px) rotateX(${-y / 7}deg) rotateY(${
+      x / 7
+    }deg)`;
 
-    Array.from(event.touches).forEach((touch) => {
-      const touchX = touch.clientX;
-      const touchY = touch.clientY;
+    const clickX = e.clientX;
+    const clickY = e.clientY;
 
-      const plusOne = document.createElement("div");
-      plusOne.className = "plus-one";
-      plusOne.innerText = "+" + earnPerTap;
-      document.body.appendChild(plusOne);
+    const plusOne = document.createElement("div");
+    plusOne.className = "plus-one";
+    plusOne.innerText = "+" + earnPerTap;
+    document.body.appendChild(plusOne);
 
-      plusOne.style.left = `${touchX}px`;
-      plusOne.style.top = `${touchY}px`;
+    plusOne.style.left = `${clickX}px`;
+    plusOne.style.top = `${clickY}px`;
 
-      setTimeout(() => {
-        plusOne.remove();
-      }, 1000);
+    setTimeout(() => {
+      plusOne.remove();
+    }, 1000);
 
-      // Increment total coins and update the display
-      totalCoins += earnPerTap;
-      totalCoinElement.innerText = numberWithCommas(totalCoins);
+    // Increment total coins and update the display
+    totalCoins += earnPerTap;
+    totalCoinElement.innerText = numberWithCommas(totalCoins);
 
-      // Decrement current energy and update the display
-      if (currentEnergy >= earnPerTap) {
-        currentEnergy -= earnPerTap;
-        currentEnergyElement.innerText = currentEnergy;
-      }
+    // Decrement current energy and update the display
+    if (currentEnergy >= earnPerTap) {
+      currentEnergy -= earnPerTap;
+      currentEnergyElement.innerText = currentEnergy;
+    }
 
-      // Calculate experience with each tap
-      experience = `${((totalCoins / coinsToLvlUp) * 100).toFixed(2)}`;
-      experienceElement.style.width =
-        experience < 10 ? "10%" : experience > 98 ? "98%" : `${experience}%`;
+    // Calculate experience with each tap
+    experience = `${((totalCoins / coinsToLvlUp) * 100).toFixed(2)}`;
+    experienceElement.style.width =
+      experience < 10 ? "10%" : experience > 98 ? "98%" : `${experience}%`;
 
-      console.log(experience);
-    });
-
-    touchTimeout = setTimeout(() => {
-      img.style.transform = "scale(1)";
+    setTimeout(() => {
+      img.style.transform = "perspective(1000px)";
     }, 150);
-  });
+  };
 
-  img.addEventListener("touchend", (event) => {
-    clearTimeout(touchTimeout);
-    img.style.transform = "scale(1)";
-  });
+  img.addEventListener("click", handleImgClick);
 
   // INCREMENT ENERGY ONE PER SECOND
   setInterval(() => {

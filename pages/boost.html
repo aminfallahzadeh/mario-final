@@ -38,7 +38,7 @@
                 <h5 class="booster-title">Energy Limit</h5>
                 <span class="booster-lvl">level 14</span>
 
-                <div class="booster-coins-container" id="open-energy-modal">
+                <div class="booster-coins-container noSelect" id="open-energy-modal">
                     <div class="booster-coins">
                         <img src="../img/coin.png" alt="Coin" class="booster-coins-img" />
                         <span class="booster-coins-amount">500,000</span>
@@ -53,7 +53,7 @@
                 <h5 class="booster-title">Recharging Speed</h5>
                 <span class="booster-lvl">level 14</span>
 
-                <div class="booster-coins-container" id="open-recharge-modal">
+                <div class="booster-coins-container noSelect" id="open-recharge-modal">
                     <div class="booster-coins">
                         <img src="../img/coin.png" alt="Coin" class="booster-coins-img" />
                         <span class="booster-coins-amount">500,000</span>
@@ -68,7 +68,7 @@
                 <h5 class="booster-title">Multitap</h5>
                 <span class="booster-lvl">level 14</span>
 
-                <div class="booster-coins-container">
+                <div class="booster-coins-container noSelect" id="open-tap-modal">
                     <div class="booster-coins">
                         <img src="../img/coin.png" alt="Coin" class="booster-coins-img" />
                         <span class="booster-coins-amount">200,000</span>
@@ -82,7 +82,7 @@
 
                 <h5 class="daily-boosters-title">Your Daily Boosters</h5>
                 <ul class="daily-boosters-container">
-                    <li class="daily-booster-card item-bg">
+                    <li class="daily-booster-card item-bg" id="tank">
                         <img src="../img/daily-boost-energy.png" alt="Energy" class="daily-booster-img" />
                         <h5 class="daily-booster-title">Full<br />
                             Tank</h5>
@@ -170,7 +170,61 @@
                 </div>
             </div>
         </div>
+
+        <div class="energy-modal hidden" id="tap-modal">
+            <img src="../img/tap-modal-img.png" alt="Energy" class="energy-modal-img" />
+
+            <div>
+                <h5 class="modal-title">Full Energy</h5>
+
+                <p class="modal-text">increase the amount of coin you can earn per tap</p>
+            </div>
+
+            <p class="modal-text">+1 coin for tap for level1</p>
+
+            <div class="energy-cost">
+                <div class="cost-coins">
+                    <img src="../img/coin.png" alt="Coin" class="cost-coins-img" />
+                    <span class="cost-coins-amount">+500</span>
+                </div>
+
+                <h5 class="cost-title">lvl 1</h5>
+            </div>
+
+            <div class="energy-buttons">
+                <div class="btn" a>
+                    <span class="btn-text">Go ahead</span>
+                </div>
+
+                <div class="btn close-modal" b>
+                    <span class="btn-text">cancel</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="energy-modal hidden" id="tank-modal">
+            <img src="../img/recharg-modal-img.png" alt="Energy" class="energy-modal-img" />
+
+            <div>
+                <h5 class="modal-title">Full Energy</h5>
+
+            </div>
+
+            <p class="modal-text"><span></span> times left</p>
+
+            <div class="energy-buttons">
+                <div class="btn" a>
+                    <span class="btn-text">Go ahead</span>
+                </div>
+
+                <div class="btn close-modal" b>
+                    <span class="btn-text">cancel</span>
+                </div>
+            </div>
+        </div>
+        <!-- <button id="trigger">Drop Coins</button> -->
     </main>
+    <div id="coins-container" class="hidden"></div>
 
     <script src="boost.js" type="text/javascript"></script>
 </body>

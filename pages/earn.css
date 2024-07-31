@@ -91,7 +91,7 @@
 .youtube-card-bonus {
   display: flex;
   justify-content: flex-start;
-  align-items: left;
+  align-items: center;
   column-gap: 5px;
 }
 

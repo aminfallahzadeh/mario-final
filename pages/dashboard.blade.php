@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>GRAND COMBAT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="dashboard.css" rel="stylesheet">
     <link href="../common.css" rel="stylesheet">
 </head>
@@ -26,8 +27,6 @@
             <img src="../img/mushroom.png" alt="Mushroom" class="ground-brown-mushroom" />
 
         </div>
-
-
 
         <header class="header">
             <div class="header-username">
