@@ -126,6 +126,7 @@
             <div class="task-grid-container">
                 <ul class="tasks-grid">
                     <li class="task-card" a>
+                        <button id="trigger">Drop Coins</button>
                         <img src="../img/telegram-task-icon.png" class="task-image" />
 
                         <h5 class="task-card-title">Join Our mario
@@ -186,10 +187,96 @@
                     </li>
                 </ul>
             </div>
+        </div>
 
+        <div class="daily-modal">
+            <img src="../img/daily-profit-modal.png" alt="Energy" class="daily-modal-img" />
+
+            <div>
+                <h5 class="modal-title">Daily Reward</h5>
+                <p class="modal-text">Accrue coin for logging into the game
+                    daily without skipping</p>
+            </div>
+
+            <ul class="daily-list">
+                <li class="daily-item daily-claimed">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <span class="daily-item-coin">+1000</span>
+                    <img src="../img/coin.png" alt="Coin" class="daily-item-img" class="daily-item-img" />
+                    <span class="daily-item-day">Day 1</span>
+                </li>
+                <li class="daily-item">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <span class="daily-item-coin">+1000</span>
+                    <img src="../img/coin.png" alt="Coin" class="daily-item-img" class="daily-item-img" />
+                    <span class="daily-item-day">Day 2</span>
+                </li>
+                <li class="daily-item">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <span class="daily-item-coin">+1000</span>
+                    <img src="../img/coin.png" alt="Coin" class="daily-item-img" class="daily-item-img" />
+                    <span class="daily-item-day">Day 3</span>
+                </li>
+
+                <li class="daily-item">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <span class="daily-item-coin">+1000</span>
+                    <img src="../img/coin.png" alt="Coin" class="daily-item-img" class="daily-item-img" />
+                    <span class="daily-item-day">Day 4</span>
+                </li>
+
+                <li class="daily-item">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <span class="daily-item-coin">+1000</span>
+                    <img src="../img/coin.png" alt="Coin" class="daily-item-img" class="daily-item-img" />
+                    <span class="daily-item-day">Day 5</span>
+                </li>
+
+                <li class="daily-item">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <span class="daily-item-coin">+1000</span>
+                    <img src="../img/coin.png" alt="Coin" class="daily-item-img" class="daily-item-img" />
+                    <span class="daily-item-day">Day 6</span>
+                </li>
+
+                <li class="daily-item">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <span class="daily-item-coin">+1000</span>
+                    <img src="../img/coin.png" alt="Coin" class="daily-item-img" class="daily-item-img" />
+                    <span class="daily-item-day">Day 7</span>
+
+                </li>
+            </ul>
+
+            <div class="buttons">
+                <div class="btn" a>
+                    <span class="btn-text">Claim Daily Reward</span>
+                </div>
+
+                <div class="btn close-modal" b>
+                    <span class="btn-text">cancel</span>
+                </div>
+            </div>
         </div>
     </main>
+    <div id="coins-container" class="hidden"></div>
+    <div class="overlay hidden" id="overlay"></div>
 
+    <script src="earn.js" type="text/javascript"></script>
 </body>
 
 </html>
